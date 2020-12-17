@@ -15,5 +15,13 @@ function getUsers(){
 }
 
 function getUser(e){
-    
+    var user = document.getElementById("user");
+    fetch("api/fetchUser.php?id=" + e.toString(),{
+
+    }).then(res=>res.json()).then(data=>{
+        document.getElementById("lastName").value = data.lastName;
+        document.getElementById("uid").value = e;
+        document.getElementById("firstName").value = data.firstName;
+        document.getElementById("uname").value = data.uname;
+    });
 }

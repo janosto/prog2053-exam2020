@@ -2,8 +2,36 @@
     <head>
     </head>
     <body onload="getUsers()">
-        <div id="users"></div>
         
+        <table border="1px solid black" width = "100%" align="center">
+            <tr>
+                <th>
+                    <h1>users</h1>
+                </th>
+                <th>
+                   <h1>edit selected user</h1>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div id="users"></div>
+                </th>
+                <th>
+                    <form action="">
+                        <label for="uid">userId:</label>
+                        <input type="text" id="uid"><br>
+                        <label for="firstName">firstname:</label>
+                        <input type="text" id="firstname"><br>
+                        <label for="lastName">Lastname:</label>
+                        <input type="text" id="lastName"><br>
+                        <label for="uname">uname:</label>
+                        <input type="text" id="uname"><br>
+                        <input name="editUser" type="submit" value="submit"></input>
+                    </form>
+                </th>
+            </tr>
+        </table>
+
         <script type="module" src="./js/components/oppgave1.js" charset="utf-8"></script>
     </body>
 
