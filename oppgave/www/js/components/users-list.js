@@ -25,7 +25,10 @@ class UsersList extends LitElement {
     // hent brukere fra server og legg de inn i this.user propertien
     fetch('api/fetchUsers.php')
     .then(response => response.json())
-    .then(data => this.users = data);
+    .then(data => {
+      this.users = data;
+      console.log(this.users);
+    });
   }
 
   setSelectedUser(e, user) {
